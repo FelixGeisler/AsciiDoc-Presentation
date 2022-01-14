@@ -40,8 +40,8 @@ gem 'asciidoctor-revealjs'
 ----
 bundle config --local github.https true
 bundle config set --local path '.bundle/gems'
-bundle binstubs --all
 bundle install
+bundle binstubs --all
 ----
 +
 
