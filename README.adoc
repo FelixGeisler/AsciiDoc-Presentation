@@ -40,8 +40,8 @@ gem 'asciidoctor-revealjs'
 ----
 bundle config --local github.https true
 bundle config set --local path '.bundle/gems'
-bundle binstubs --all
 bundle install
+bundle binstubs --all
 ----
 +
 
@@ -59,7 +59,7 @@ git clone -b 3.9.2 --depth 1 https://github.com/hakimel/reveal.js.git
 +
 [source]
 ----
-bundle exec asciidoctor-revealjs CONTENT_FILE.adoc
+bundle exec asciidoctor-revealjs presentation.adoc
 ----
 +
 
