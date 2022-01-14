@@ -1,1 +1,76 @@
+:experimental:
+
 # AsciiDoc-Presentation
+
+
+## Asciidcotor reveal.js
+
+see https://docs.asciidoctor.org/reveal.js-converter/latest/setup/ruby-setup/[Asciidoctor reveal.js] documentation.
+
+. Install https://bundler.io/[bundler]. 
++
+[source]
+----
+gem install bundler
+----
++
+
+. Create project directory
++
+[source]
+----
+mkdir AsciiDoc-Presentation
+cd AsciiDoc-Presentation
+----
++ 
+
+. Create a Gemfile
++
+[source, ruby]
+----
+source 'https://rubygems.org'
+
+gem 'asciidoctor-revealjs'
+----
++
+
+. Install required gems
++
+[source]
+----
+bundle config --local github.https true
+bundle config set --local path '.bundle/gems'
+bundle binstubs --all
+bundle install
+----
++
+
+. Clone reveal.js
++
+[source]
+----
+git clone -b 3.9.2 --depth 1 https://github.com/hakimel/reveal.js.git
+----
++
+
+. Write your presentation in AsciiDoc.
+
+. Render your presentation into slides.
++
+[source]
+----
+bundle exec asciidoctor-revealjs CONTENT_FILE.adoc
+----
++
+
+. Start your Webserver.
++
+[source]
+----
+ruby -run -e httpd . -p 5000 -b 127.0.0.1
+----
++
+
+. Open the presentation with your browser on http://localhost:5000.
+
+. Switch to speaker view by pressing the kbd:[s]-Key.
